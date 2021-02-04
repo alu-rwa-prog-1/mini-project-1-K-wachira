@@ -67,11 +67,45 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
           child: Column(
         children: [
-          Container(
-            height: 100,
-            width: 100,
-            color: Colors.ambercd ,
-          )
+          Wrap(
+            children: [
+              ChoiceChip(
+                label: Text('Small'),
+                selected: false,
+                onSelected: (bool selected) {
+                  setState(() {});
+                },
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              ChoiceChip(
+                label: Text('Big'),
+                selected: true,
+                onSelected: (bool selected) {
+                  setState(() {});
+                },
+                selectedColor: Theme.of(context).accentColor,
+              ),
+            ],
+          ),
+          DefaultTabController(
+              length: 3,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text("Most Popular"),
+                  Text("On Discount"),
+                  Text("Most viewed"),
+                  IconButton(
+                    icon: Icon(Icons.arrow_right),
+                    tooltip: 'Open shopping cart',
+                    onPressed: () {
+                      // +> cunsumers cart
+                    },
+                  ),
+                ],
+              ))
         ],
       )),
       floatingActionButton: FloatingActionButton(
