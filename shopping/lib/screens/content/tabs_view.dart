@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/screens/content/grid_view.dart';
+import 'package:shopping/screens/content/new_product_grid.dart';
 import 'package:shopping/screens/content/popular_grid.dart';
+import 'package:shopping/screens/content/recommended_grid.dart';
 
 class Tabs extends StatelessWidget {
   @override
@@ -62,14 +64,8 @@ class Tabs extends StatelessWidget {
                 child: TabBarView(children: <Widget>[
                   popular_grid(),
                   //Text("popular"),
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    height: 100,
-                    color: Colors.red,
-                  ),
+                  new_product_grid(),
+                  recommended_products_grid(),
                   Container(
                     height: 100,
                     color: Colors.cyanAccent,
