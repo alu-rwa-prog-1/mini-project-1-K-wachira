@@ -22,7 +22,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _value;
+  int _value =1;
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
