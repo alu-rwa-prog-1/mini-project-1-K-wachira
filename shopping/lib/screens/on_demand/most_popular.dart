@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:shopping/shared%20widgets/images.dart';
 import 'package:shopping/shared%20widgets/snappy_card.dart';
 
-class most_popular extends StatelessWidget {
+class most_Popular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(

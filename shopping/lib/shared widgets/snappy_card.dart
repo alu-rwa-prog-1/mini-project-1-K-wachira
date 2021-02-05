@@ -32,8 +32,8 @@ class snappy_card extends StatelessWidget {
                         ),
                       )))),
           Positioned(
-            top: -10,
-            left: -16,
+            top: -20,
+            right: -12,
             child: FlatButton(
               padding: EdgeInsets.all(20),
               shape: CircleBorder(),
@@ -67,8 +67,8 @@ class snappy_card extends StatelessWidget {
             ),
           ),
           Positioned(
-              top: 0,
-              left: 13,
+              top: -1,
+              left: 15,
               child: Container(
                 padding:
                     EdgeInsets.only(top: 5, left: 10, right: 10, bottom: 5),

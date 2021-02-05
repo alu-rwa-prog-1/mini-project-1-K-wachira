@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(title: 'Shoppy Store'),
+      home: MyHomePage(title: 'Shoppy Stores'),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/screens/content/tabs_view.dart';
 import 'package:shopping/screens/on_demand/most_popular.dart';
 import 'package:shopping/screens/on_demand/on_discount.dart';
 import 'package:shopping/screens/on_demand/random.dart';
@@ -22,7 +23,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _value =1;
+  int _value = 1;
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -69,77 +70,85 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-          child: Column(
+          child: SingleChildScrollView(
+                      child: Column(
         children: [
-          Wrap(
-            children: [
-              ChoiceChip(
-                label: Text('Most Popular'),
-                selected: _value == 1,
-                onSelected: (bool selected) {
-                  setState(() {
-                    _value = 1;
-                  });
-                },
-                selectedColor: Colors.amber,
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              ChoiceChip(
-                label: Text('On Discount'),
-                selected: _value == 2,
-                onSelected: (bool selected) {
-                  setState(() {
-                    _value = 2;
-                  });
-                },
-                selectedColor: Colors.amber,
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              ChoiceChip(
-                label: Text('Most Popular'),
-                selected: _value == 3,
-                onSelected: (bool selected) {
-                  setState(() {
-                    _value = 3;
-                  });
-                },
-                selectedColor: Colors.amber,
-              ),
-            ],
-          ),
-          if (_value == 1) ...{
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
-              height: 200.0,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: most_popular(),
-              ),
+            SizedBox(
+              height: 10,
             ),
-          } else if (_value == 2) ...{
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 20.0),
-              height: 200.0,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: on_discount(),
-              ),
+            Wrap(
+              children: [
+                ChoiceChip(
+                  label: Text('Most Popular'),
+                  selected: _value == 1,
+                  onSelected: (bool selected) {
+                    setState(() {
+                      _value = 1;
+                    });
+                  },
+                  selectedColor: Colors.red,
+                ),
+                SizedBox(
+                  width: 40,
+                ),
+                ChoiceChip(
+                  label: Text('On Discount'),
+                  selected: _value == 2,
+                  onSelected: (bool selected) {
+                    setState(() {
+                      _value = 2;
+                    });
+                  },
+                  selectedColor: Colors.red,
+                ),
+                SizedBox(
+                  width: 40,
+                ),
+                ChoiceChip(
+                  label: Text('Random'),
+                  selected: _value == 3,
+                  onSelected: (bool selected) {
+                    setState(() {
+                      _value = 3;
+                    });
+                  },
+                  selectedColor: Colors.red,
+                ),
+              ],
             ),
-          } else ...{
-            Container(
-                margin: EdgeInsets.symmetric(vertical: 20.0),
+            if (_value == 1) ...{
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 5.0),
                 height: 200.0,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: random(),
-                )),
-          }
+                  child: most_Popular(),
+                ),
+              ),
+            } else if (_value == 2) ...{
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 5.0),
+                height: 200.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: on_discount(),
+                ),
+              ),
+            } else ...{
+              Container(
+                  margin: EdgeInsets.symmetric(vertical: 5.0),
+                  height: 200.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: random(),
+                  )),
+            },
+        
+        Tabs(),
         ],
-      )),
+      ),
+          ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         tooltip: 'Increment',
