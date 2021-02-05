@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class image_card extends StatelessWidget {
   final String image;
@@ -22,7 +23,7 @@ class image_card extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     image: DecorationImage(
-                      image: NetworkImage(image),
+                      image: CachedNetworkImageProvider(image),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -40,10 +41,6 @@ class image_card extends StatelessWidget {
                 ],
               ),
               Chip(
-                avatar: CircleAvatar(
-                  backgroundColor: Colors.grey.shade800,
-                  child: Icon(Icons.shopping_bag),
-                ),
                 label: Text('Add to bag'),
               ),
             ],

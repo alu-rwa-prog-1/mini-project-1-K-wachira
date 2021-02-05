@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/navigation/bottomsheet.dart';
+import 'package:shopping/navigation/nav_drawer.dart';
 import 'package:shopping/screens/content/tabs_view.dart';
 import 'package:shopping/screens/on_demand/most_popular.dart';
 import 'package:shopping/screens/on_demand/on_discount.dart';
@@ -33,127 +35,127 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.black),
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
 
-        elevation: 10.0,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          tooltip: 'Menu',
-          onPressed: () {
-            // => to navigation
-          },
-        ),
+          elevation: 10.0,
 
-        title: Text(
-          widget.title,
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            tooltip: 'Open shopping cart',
-            onPressed: () {
-              //  open the shopping cart
-            },
+          title: Text(
+            widget.title,
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
-          IconButton(
-            icon: Icon(Icons.shopping_cart),
-            tooltip: 'Open shopping cart',
-            onPressed: () {
-              // +> cunsumers cart
-            },
-          ),
-        ],
-      ),
-      body: Center(
-          child: SingleChildScrollView(
-                      child: Column(
-        children: [
-            SizedBox(
-              height: 10,
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              tooltip: 'Open shopping cart',
+              onPressed: () {
+                //  open the shopping cart
+              },
             ),
-            Wrap(
+            IconButton(
+              icon: Icon(Icons.shopping_bag),
+              tooltip: 'Open shopping cart',
+              onPressed: () {
+                // +> cunsumers cart
+              },
+            ),
+          ],
+        ),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
               children: [
-                ChoiceChip(
-                  label: Text('Most Popular'),
-                  selected: _value == 1,
-                  onSelected: (bool selected) {
-                    setState(() {
-                      _value = 1;
-                    });
-                  },
-                  selectedColor: Colors.red,
-                ),
                 SizedBox(
-                  width: 40,
+                  height: 10,
                 ),
-                ChoiceChip(
-                  label: Text('On Discount'),
-                  selected: _value == 2,
-                  onSelected: (bool selected) {
-                    setState(() {
-                      _value = 2;
-                    });
-                  },
-                  selectedColor: Colors.red,
+                Wrap(
+                  children: [
+                    ChoiceChip(
+                      label: Text('Most Popular'),
+                      selected: _value == 1,
+                      onSelected: (bool selected) {
+                        setState(() {
+                          _value = 1;
+                        });
+                      },
+                      selectedColor: Colors.red,
+                    ),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    ChoiceChip(
+                      label: Text('On Discount'),
+                      selected: _value == 2,
+                      onSelected: (bool selected) {
+                        setState(() {
+                          _value = 2;
+                        });
+                      },
+                      selectedColor: Colors.red,
+                    ),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    ChoiceChip(
+                      label: Text('Random'),
+                      selected: _value == 3,
+                      onSelected: (bool selected) {
+                        setState(() {
+                          _value = 3;
+                        });
+                      },
+                      selectedColor: Colors.red,
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  width: 40,
-                ),
-                ChoiceChip(
-                  label: Text('Random'),
-                  selected: _value == 3,
-                  onSelected: (bool selected) {
-                    setState(() {
-                      _value = 3;
-                    });
-                  },
-                  selectedColor: Colors.red,
-                ),
+                if (_value == 1) ...{
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    height: 200.0,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: most_Popular(),
+                    ),
+                  ),
+                } else if (_value == 2) ...{
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 5.0),
+                    height: 200.0,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: on_discount(),
+                    ),
+                  ),
+                } else ...{
+                  Container(
+                      margin: EdgeInsets.symmetric(vertical: 5.0),
+                      height: 200.0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: random(),
+                      )),
+                },
+                Tabs(),
               ],
             ),
-            if (_value == 1) ...{
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                height: 200.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: most_Popular(),
-                ),
-              ),
-            } else if (_value == 2) ...{
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                height: 200.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: on_discount(),
-                ),
-              ),
-            } else ...{
-              Container(
-                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                  height: 200.0,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: random(),
-                  )),
-            },
-        
-        Tabs(),
-        ],
-      ),
           ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            BottomSheetContent();
+            print("Add");
+          },
+          tooltip: 'Increment',
+          child: Icon(Icons.reorder_sharp),
+        ),
+        drawer: Drawer(
+          child: NavigationDrawer(),
+          // child:
+
+          // This trailing comma makes auto-formatting nicer for build methods.
+        ));
   }
 }
