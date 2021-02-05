@@ -17,9 +17,10 @@ class image_card extends StatelessWidget {
             children: [
               Container(
                 child: Container(
-                  height: 120.0,
-                  width: 120.0,
+                  height: 128.0,
+                  width: 200.0,
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     image: DecorationImage(
                       image: NetworkImage(image),
                       fit: BoxFit.fill,
