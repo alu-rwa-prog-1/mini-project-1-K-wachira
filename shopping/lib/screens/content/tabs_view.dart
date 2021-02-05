@@ -3,6 +3,7 @@ import 'package:shopping/screens/content/grid_view.dart';
 import 'package:shopping/screens/content/new_product_grid.dart';
 import 'package:shopping/screens/content/popular_grid.dart';
 import 'package:shopping/screens/content/recommended_grid.dart';
+import 'package:shopping/screens/content/saved_grid.dart';
 
 class Tabs extends StatelessWidget {
   @override
@@ -62,14 +63,17 @@ class Tabs extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 0),
                 height: MediaQuery.of(context).size.height * .70,
                 child: TabBarView(children: <Widget>[
+                  // Shows a grid view of the popular products
                   popular_grid(),
-                  //Text("popular"),
+                  // Shows a grid view of the new products
+
                   new_product_grid(),
+                  // Shows a grid view of the popular/recommended products
+
                   recommended_products_grid(),
-                  Container(
-                    height: 100,
-                    color: Colors.cyanAccent,
-                  ),
+                  // Shows a grid view of the user saved products
+
+                  saved_product_grid(),
                 ]),
               )
             ],

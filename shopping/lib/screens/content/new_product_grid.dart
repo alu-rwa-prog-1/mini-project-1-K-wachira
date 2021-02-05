@@ -9,7 +9,7 @@ class new_product_grid extends StatelessWidget {
       // horizontal, this produces 2 rows.
       crossAxisCount: 2,
       // Generate 100 widgets that display their index in the List.
-      children: List.generate(12, (index) {
+      children: List.generate(11, (index) {
         return Center(
             child: image_card(
           image: newproduct[index],
