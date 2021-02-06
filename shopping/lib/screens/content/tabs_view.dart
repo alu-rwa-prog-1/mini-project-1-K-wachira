@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/screens/content/grid_view.dart';
 import 'package:shopping/screens/content/new_product_grid.dart';
 import 'package:shopping/screens/content/popular_grid.dart';
 import 'package:shopping/screens/content/recommended_grid.dart';
@@ -64,16 +63,16 @@ class Tabs extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * .70,
                 child: TabBarView(children: <Widget>[
                   // Shows a grid view of the popular products
-                  popular_grid(),
+                  PopularGrid(),
                   // Shows a grid view of the new products
 
-                  new_product_grid(),
+                  NewProductGrid(),
                   // Shows a grid view of the popular/recommended products
 
-                  recommended_products_grid(),
+                  RecommendedProductsGrid(),
                   // Shows a grid view of the user saved products
 
-                  saved_product_grid(),
+                  SavedProductGrid(),
                 ]),
               )
             ],

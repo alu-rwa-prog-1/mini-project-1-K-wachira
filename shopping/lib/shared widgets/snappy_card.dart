@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class snappy_card extends StatelessWidget {
+class SnappyCard extends StatelessWidget {
   final String image;
-  const snappy_card({Key key, this.image}) : super(key: key);
+  const SnappyCard({Key key, this.image}) : super(key: key);
   Widget build(BuildContext context) {
     return SizedBox(
       // color: Colors.red,

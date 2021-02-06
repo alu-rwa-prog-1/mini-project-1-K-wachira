@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class image_card extends StatelessWidget {
+class ImageCard extends StatelessWidget {
   final String image;
-
-  const image_card({Key key, this.image}) : super(key: key);
+  final String name;
+  final String price;
+  const ImageCard({Key key, this.image, this.name, this.price})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +35,11 @@ class image_card extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Apple"),
+                  Text(name),
                   SizedBox(
-                    width: 60,
+                    width: 30,
                   ),
-                  Text("10"),
+                  Text(price),
                 ],
               ),
               Chip(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shopping/shared%20widgets/assets.dart';
 import 'package:shopping/shared%20widgets/image_card.dart';
 
-class popular_grid extends StatelessWidget {
+class PopularGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       // Create a grid with 2 columns.
@@ -11,8 +11,10 @@ class popular_grid extends StatelessWidget {
       // Generate 100 widgets that display their index in the List.
       children: List.generate(popularMap.length, (index) {
         return Center(
-            child: image_card(
+            child: ImageCard(
           image: popularMap[index]["imageUrl"],
+          name: popularMap[index]['productName'],
+          price:  popularMap[index]['price'],
         ));
       }),
     );

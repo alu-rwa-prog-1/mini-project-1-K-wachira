@@ -26,6 +26,15 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _value = 1;
+
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -117,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 200.0,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: most_Popular(),
+                      child: MostPopular(),
                     ),
                   ),
                 } else if (_value == 2) ...{
@@ -126,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 200.0,
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: on_discount(),
+                      child: OnDiscount(),
                     ),
                   ),
                 } else ...{
@@ -135,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 200.0,
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: random(),
+                        child: Random(),
                       )),
                 },
                 Tabs(),
@@ -150,6 +159,25 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           tooltip: 'Increment',
           child: Icon(Icons.reorder_sharp),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.notifications),
+              label: 'Notification',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.red,
+          onTap: _onItemTapped,
         ),
         drawer: Drawer(
           child: NavigationDrawer(),

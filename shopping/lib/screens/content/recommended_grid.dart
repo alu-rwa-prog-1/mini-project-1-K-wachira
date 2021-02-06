@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shopping/shared%20widgets/assets.dart';
 import 'package:shopping/shared%20widgets/image_card.dart';
 
-class recommended_products_grid extends StatelessWidget {
+class RecommendedProductsGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       // Create a grid with 2 columns.
@@ -11,8 +11,11 @@ class recommended_products_grid extends StatelessWidget {
       // Generate 100 widgets that display their index in the List.
       children: List.generate(recommendedMap.length, (index) {
         return Center(
-            child: image_card(
+            child: ImageCard(
           image: recommendedMap[index]['imageUrl'],
+          name: recommendedMap[index]['productName'],
+          price:  recommendedMap[index]['price'],
+          
         ));
       }),
     );
