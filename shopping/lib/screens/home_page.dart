@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/navigation/bottomsheet.dart';
 import 'package:shopping/navigation/nav_drawer.dart';
 import 'package:shopping/screens/content/tabs_view.dart';
 import 'package:shopping/screens/on_demand/most_popular.dart';
@@ -152,14 +151,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            BottomSheetContent();
-            print("Add");
-          },
-          tooltip: 'Increment',
-          child: Icon(Icons.reorder_sharp),
-        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -168,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.notifications),
-              label: 'Notification',
+              label: 'Notifications',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),

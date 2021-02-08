@@ -11,12 +11,13 @@ class RecommendedProductsGrid extends StatelessWidget {
       // Generate 100 widgets that display their index in the List.
       children: List.generate(recommendedMap.length, (index) {
         return Center(
+            widthFactor: 200.0,
+            heightFactor: 180,
             child: ImageCard(
-          image: recommendedMap[index]['imageUrl'],
-          name: recommendedMap[index]['productName'],
-          price:  recommendedMap[index]['price'],
-          
-        ));
+              image: recommendedMap[index]['imageUrl'],
+              name: recommendedMap[index]['productName'],
+              price: recommendedMap[index]['price'],
+            ));
       }),
     );
   }

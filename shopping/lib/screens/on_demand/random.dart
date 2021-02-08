@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:shopping/shared%20widgets/images.dart';
+import 'package:shopping/shared%20widgets/assets.dart';
 import 'package:shopping/shared%20widgets/snappy_card.dart';
 
 class Random extends StatelessWidget {
@@ -10,24 +10,86 @@ class Random extends StatelessWidget {
       // This next line does the trick.
       scrollDirection: Axis.horizontal,
       children: <Widget>[
-        SnappyCard(image: fruit[1]),
-        SnappyCard(image: onDemand[1]),
-        SnappyCard(image: MostPopuar[1]),
-        SnappyCard(image: fruit[0]),
-        SnappyCard(image: onDemand[0]),
-        SnappyCard(image: MostPopuar[0]),
-        SnappyCard(image: fruit[2]),
-        SnappyCard(image: onDemand[2]),
-        SnappyCard(image: MostPopuar[2]),
-        SnappyCard(image: fruit[3]),
-        SnappyCard(image: onDemand[3]),
-        SnappyCard(image: MostPopuar[3]),
-        SnappyCard(image: fruit[4]),
-        SnappyCard(image: onDemand[4]),
-        SnappyCard(image: MostPopuar[4]),
-        SnappyCard(image: fruit[5]),
-        SnappyCard(image: onDemand[5]),
-        SnappyCard(image: MostPopuar[5]),
+        SnappyCard(
+          image: mostPopuarMap[0]['imageUrl'],
+          name: mostPopuarMap[0]['productName'],
+          price: mostPopuarMap[0]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[1]['imageUrl'],
+          name: mostPopuarMap[1]['productName'],
+          price: mostPopuarMap[1]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[2]['imageUrl'],
+          name: mostPopuarMap[2]['productName'],
+          price: mostPopuarMap[2]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[3]['imageUrl'],
+          name: mostPopuarMap[3]['productName'],
+          price: mostPopuarMap[3]['price'],
+        ),
+        SnappyCard(
+          image: ondemandMap[6]['imageUrl'],
+          price: ondemandMap[6]['price'],
+          name: ondemandMap[6]['productName'],
+        ),
+        SnappyCard(
+          image: ondemandMap[7]['imageUrl'],
+          price: ondemandMap[7]['price'],
+          name: ondemandMap[7]['productName'],
+        ),
+        SnappyCard(
+          image: ondemandMap[8]['imageUrl'],
+          price: ondemandMap[8]['price'],
+          name: ondemandMap[8]['productName'],
+        ),
+        SnappyCard(
+          image: ondemandMap[9]['imageUrl'],
+          price: ondemandMap[9]['price'],
+          name: ondemandMap[9]['productName'],
+        ),
+        SnappyCard(
+          image: ondemandMap[10]['imageUrl'],
+          price: ondemandMap[10]['price'],
+          name: ondemandMap[10]['productName'],
+        ),
+        SnappyCard(
+          image: ondemandMap[11]['imageUrl'],
+          price: ondemandMap[11]['price'],
+          name: ondemandMap[11]['productName'],
+        ),
+        SnappyCard(
+          image: ondemandMap[12]['imageUrl'],
+          price: ondemandMap[12]['price'],
+          name: ondemandMap[12]['productName'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[5]['imageUrl'],
+          name: mostPopuarMap[5]['productName'],
+          price: mostPopuarMap[5]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[6]['imageUrl'],
+          name: mostPopuarMap[6]['productName'],
+          price: mostPopuarMap[6]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[7]['imageUrl'],
+          name: mostPopuarMap[7]['productName'],
+          price: mostPopuarMap[7]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[8]['imageUrl'],
+          name: mostPopuarMap[8]['productName'],
+          price: mostPopuarMap[8]['price'],
+        ),
+        SnappyCard(
+          image: mostPopuarMap[9]['imageUrl'],
+          name: mostPopuarMap[9]['productName'],
+          price: mostPopuarMap[9]['price'],
+        ),
       ],
     );
   }

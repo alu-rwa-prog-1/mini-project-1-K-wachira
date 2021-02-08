@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class SnappyCard extends StatelessWidget {
   final String image;
-  const SnappyCard({Key key, this.image}) : super(key: key);
+  final String name;
+  final String price;
+  const SnappyCard({Key key, this.image, this.name, this.price})
+      : super(key: key);
   Widget build(BuildContext context) {
     return SizedBox(
       // color: Colors.red,
@@ -19,14 +23,14 @@ class SnappyCard extends StatelessWidget {
                   onPressed: () {},
                   child: Hero(
                       transitionOnUserGestures: true,
-                      tag: "Test",
+                      tag: "Products",
                       child: Container(
                         height: 180.0,
                         width: 200.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(8.0)),
                           image: DecorationImage(
-                            image: NetworkImage(image),
+                            image: CachedNetworkImageProvider(image),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -56,10 +60,10 @@ class SnappyCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Food",
+                  Text(name,
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w700)),
-                  Text("10",
+                  Text('\$ ' + price,
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.w700)),
                 ],

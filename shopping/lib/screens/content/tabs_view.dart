@@ -19,7 +19,7 @@ class Tabs extends StatelessWidget {
                 child: TabBar(
                     indicatorSize: TabBarIndicatorSize.label,
                     isScrollable: true,
-                    indicatorColor: Colors.orangeAccent,
+                    indicatorColor: Colors.red,
                     unselectedLabelColor: Colors.grey,
                     labelPadding: EdgeInsets.only(
                       bottom: 15,

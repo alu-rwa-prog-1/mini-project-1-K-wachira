@@ -19,43 +19,39 @@ class ImageCard extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                child: Container(
-                  height: 128.0,
-                  width: 200.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    image: DecorationImage(
-                      image: CachedNetworkImageProvider(image),
-                      fit: BoxFit.fill,
-                    ),
+                height: 128.0,
+                width: 200.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  image: DecorationImage(
+                    image: CachedNetworkImageProvider(image),
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
               Divider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(name),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(price),
-                ],
-              ),
-              Chip(
-                label: Text('Add to bag'),
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: Text(name,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700)),
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Text('\$ ' + price,
+                        style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.w700)),
+                  ],
+                ),
               ),
             ],
           )),
     );
   }
 }
-
-// Image.network(
-//                     image,
-//                     // placeholder: (context, url) => Center(child: CircularProgressIndicator>
-//                     // errorWidget: (context, url, error) => Image.asset('assets/placeholder.>
-//                     fit: fit,
-//                     width: width,
-//                     height: height,
-//                   ),
