@@ -12,25 +12,19 @@ This project runs with the support of the following packages as libraries:
 
 
 
-![image](https://imgur.com/wF8cJ7s)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/1.png)
 
 
-![image](https://imgur.com/i70IGrf)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/2.png)
 
 
-![image](https://imgur.com/42IGU9U)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/3.png)
 
 
-![image](https://imgur.com/HQJBeMS)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/nav.png)
 
-![image](https://imgur.com/lyLim8y)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/new.png)
 
-![image](https://imgur.com/pXrNk80)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/recommeded.png)
 
-![image](https://imgur.com/c0JPDK8)
-
-
-
-![First Bad Version](https://raw.githubusercontent.com/K-wachira/Data-Structures-and-Algorithms/master/PrtSc/First%20Bad%20Version.png)
-
-![Imgur](https://imgur.com/wF8cJ7s)
+![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/saved.png)
