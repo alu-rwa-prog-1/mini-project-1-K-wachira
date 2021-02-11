@@ -12,19 +12,19 @@ This project runs with the support of the following packages as libraries:
 
 
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/1.png)
+![image](https://i.imgur.com/wF8cJ7s.png)
 
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/2.png)
+![image](https://i.imgur.com/i70IGrf.png)
 
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/3.png)
+![image](https://i.imgur.com/42IGU9U.png)
 
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/nav.png)
+![image](https://i.imgur.com/HQJBeMS.png)
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/new.png)
+![image](https://i.imgur.com/lyLim8y.png)
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/recommeded.png)
+![image](https://i.imgur.com/pXrNk80.png)
 
-![image](https://github.com/alu-rwa-prog-1/mini-project-1-K-wachira/blob/main/screenshots/saved.png)
+![image](https://i.imgur.com/c0JPDK8.png)
